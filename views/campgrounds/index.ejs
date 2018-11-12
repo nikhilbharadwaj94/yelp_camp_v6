@@ -1,0 +1,42 @@
+<!--this is the header partial that we will put so that we can make the code as DRY as possible-->
+<% include ../partials/header %> <!--../ represents 1 level back-->
+
+<!--Add code here-->
+<div class="container">
+        <header class="Jumbotron">
+            <h1>
+                <center>
+                    <strong>This is the campgrounds page!!</strong>
+                </center>
+            </h1>
+            <p><center>Check out the beautiful campgrounds!</center></p>
+<!--I was searching how to use a button to load different pages. The below code is the answer. 
+What we have to basically do is to use an anchor tag and style it to look like a button-->
+            <a class="btn btn-lg" href="/campgrounds/new">
+                <center>
+                    <strong>Add New Campground!</strong>
+                </center>
+            </a>
+        </header>
+        <div class="row" style="display: flex; flex-wrap: wrap;">
+            <% campgrounds.forEach(function(campgrounds){ %>
+                <div>
+                    <div class="caption">
+                        <h4>
+                            <%= campgrounds.name%>
+                        </h4>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="thumbnail">
+                            <img src="<%= campgrounds.image %>">
+                        </div>
+                    </div>
+                    <p><a href="/campgrounds/<%= campgrounds._id %>" class="btn btn-primary">More info</a></p>
+                </div>
+        </div>
+            <% });%>
+
+    </div>
+
+    <!--this is the footer partial that we will put so that we can make the code as DRY as possible-->
+    <% include ../partials/footer %>

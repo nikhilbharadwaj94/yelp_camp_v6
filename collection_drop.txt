@@ -1,0 +1,8 @@
+In lecture 295, Colt shows us how to drop an entire collection. This will be done when we dont have any really important data
+saved in the collections and we can afford to lose them. 
+Follow the steps to achieve this result:-
+1. check the available DB's by executing "show dbs" in mongo console.
+2. use <db name> to switch to that particular db.
+3. show collections to check what collections are available.
+4. db.<collection-name>.drop() to delete all the records in that particular collection.
+5. execute db.<collection-name>.find() and verify that nothing gets returned as the file collection/table should be empty.

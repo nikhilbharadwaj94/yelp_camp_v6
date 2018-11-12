@@ -1,0 +1,18 @@
+<!--this is the footer partial that we will put so that we can make the code as DRY as possible-->
+<% include ../partials/header %><!--../ represents 1 level back-->
+
+<!--ADD CODE BELOW-->
+<div class="container">
+<h1><center><strong>Add New comment to <%=campground.name %>!!</strong></center></h1>
+<div style="margin: 10px 10px; width : 30%">
+<form action="/campgrounds/<%= campground._id %>/comments" method="POST">
+      <input type="text" class="form-control" name="comment[text]" placeholder="enter comment" style="margin: 10px 10px">
+      <input type="text" class="form-control" name="comment[author]" placeholder="enter authod name" style="margin: 10px 10px">
+      <button class="btn btn-lg" style="margin: 10px 10px">Submit</button>
+      </form>
+    </div>
+<a href="/campgrounds"><strong>BACK!!</strong></a>
+</div>
+
+<!--this is the footer partial that we will put so that we can make the code as DRY as possible-->
+<% include ../partials/footer %>

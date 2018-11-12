@@ -1,0 +1,6 @@
+npm install --save passport passport-local passport-mongoose-local express-session
+
+>>There is a parameter called req.user which will contain information regarding who is currently logged in.
+Using this we can customize things like welcome message etc.
+
+>>
